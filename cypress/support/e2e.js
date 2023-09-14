@@ -17,5 +17,6 @@
 import './commands'
 require('cypress-plugin-xhr-toggle')
 
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

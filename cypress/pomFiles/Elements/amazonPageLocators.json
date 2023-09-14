@@ -1,8 +1,8 @@
 {
 
-   "amazonPage_Locators": {
+    
       
-    "hamburger": "#nav-hamburger-menu > i",
+     "hamburger": ".hm-icon",
     "electronics_text": ".hmenu-visible > :nth-child(7) > .hmenu-item > div",
     "television_text":"#hmenu-content > ul.hmenu.hmenu-visible.hmenu-translateX > li:nth-child(15) > a",
     "nav_television_text": ".s-navigation-item",
@@ -14,17 +14,12 @@
     "product_description_text_log": "#feature-bullets > ul > li:nth-child(1) > span"
 
 
-   },
-
-   "searchPages_locators": {
-
-      "search_bar": "#twotabsearchtextbox",
-      "page_load_check": "[data-cel-widget='search_result_0']"
 
 
 
 
-   }
+
+   
 
 
 

@@ -4,7 +4,8 @@
   "description": "new training",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome --headless"
   },
   "keywords": [
     "sam"
@@ -14,9 +15,10 @@
   "dependencies": {
     "cypress": "^13.1.0",
     "cypress-image-compare": "^5.5.0",
-    "cypress-mongodb": "^6.2.0",
     "cypress-plugin-xhr-toggle": "^1.0.0",
-    "mochawesome": "^7.1.3",
-    "mongodb": "^6.0.0"
+    "mochawesome": "^7.1.3"
+  },
+  "devDependencies": {
+    "cypress-image-snapshot": "^4.0.1"
   }
 }
