@@ -1,0 +1,39 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14 # You can change the Node.js version as needed
+
+      - name: Install dependencies
+        run: npm install # Or use yarn if preferred
+
+      - name: Run Cypress tests
+        run: npm run cy:run # Adjust the script name as per your package.json
+
+      - name: Upload test results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-results
+          path: cypress/videos # Adjust to the location of your test results
+
+      - name: Save screenshots and reports as artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-screenshots-reports
+          path: cypress/screenshots, cypress/reports # Adjust to the location of your screenshots and reports
