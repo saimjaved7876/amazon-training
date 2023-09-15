@@ -8,7 +8,7 @@
         "search_result_product_name": ".a-size-mini",
         "search_result_product_price": ".a-price-whole",
         "search_result_product_image": ".s-image",
-        "search_result_product_rating": "[aria-label*='out of 5 stars'] > .a-size-base",
+        "search_result_product_rating": ".a-size-base",
         "landing_page_product_title": "#title > #productTitle",
         "landing_page_product_price": ".a-spacing-none > .a-price > [aria-hidden='true'] > .a-price-whole",
         "landing_page_product_rating": "#averageCustomerReviews_feature_div > #averageCustomerReviews > [data-action='acrStarsLink-click-metrics'] > #acrPopover > span.a-declarative > .a-popover-trigger > .a-size-base",
