@@ -4,9 +4,7 @@ import { amazonPageActions } from "../pomFiles/Actions/amazon_actions"
 
 const amazon_PageActions = new amazonPageActions
 
-describe('TC_01 Check product can be entered in the cart', {
-  retries: 5
-}, () => {
+describe('TC_01 Check product can be entered in the cart', () => {
 
   before(()=>{
     cy.visit("https://www.amazon.com")
@@ -21,7 +19,7 @@ describe('TC_01 Check product can be entered in the cart', {
   it('Journey from homepage to PDP', () => {
    
 
-    cy.wait(2000)
+    cy.wait(3000)
     amazon_PageActions.hamburger_click()
 
 
