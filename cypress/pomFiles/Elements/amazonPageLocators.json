@@ -2,7 +2,7 @@
 
     
       
-    "hamburger": "#nav-hamburger-menu > span",
+    "hamburger": ".hm-icon.nav-sprite",
     "electronics_text": ".hmenu-visible > :nth-child(7) > .hmenu-item > div",
     "television_text":"#hmenu-content",
     "nav_television_text": ".s-navigation-item",
