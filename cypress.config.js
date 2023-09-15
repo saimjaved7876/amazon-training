@@ -17,8 +17,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   chromeWebSecurity: false,
   hideXhr: true,
-  videosFolder: cypress/videos,
-  video: true,
+  
   
 
   e2e: {
