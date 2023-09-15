@@ -18,7 +18,7 @@ export class amazonPageActions{
     television_text_click(){
 
 
-        cy.get(amazonPage_Locators.television_text).click({ multiple: true, force: true })
+        cy.get(amazonPage_Locators.television_text).contains("Television & Video").click({ multiple: true, force: true })
     }
 
     nav_television_text_click(){

@@ -4,7 +4,7 @@
       
     "hamburger": "#nav-hamburger-menu > span",
     "electronics_text": ".hmenu-visible > :nth-child(7) > .hmenu-item > div",
-    "television_text":"#hmenu-content > ul.hmenu.hmenu-visible.hmenu-translateX > li:nth-child(15) > a",
+    "television_text":"#hmenu-content",
     "nav_television_text": ".s-navigation-item",
     "samsung_text": "[aria-label='SAMSUNG']",
     "filter_dropDown": "#a-autoid-2-announce",
