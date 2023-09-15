@@ -26,7 +26,7 @@ describe('TC_01 Check product can be entered in the cart', () => {
     
      cy.wait(3000)
    amazon_PageActions.electronics_text_click()
-     cy.wait(4000)
+     cy.wait(5000)
     
     amazon_PageActions.television_text_click()
 
