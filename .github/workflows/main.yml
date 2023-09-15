@@ -29,7 +29,8 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: cypress-results
-          path: cypress/videos # Adjust to the location of your test results
+          path: cypress/screenshots # Adjust to the location of your test results
+          
 
       - name: Save screenshots and reports as artifacts
         if: ${{ always() }}
