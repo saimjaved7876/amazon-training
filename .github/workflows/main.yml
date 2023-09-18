@@ -10,26 +10,15 @@ jobs:
   wireguard_example:
     runs-on: ubuntu-latest
     steps:
-      run: |
-          sudo apt-get update
-          sudo apt-get --assume-yes --no-install-recommends install openvpn          
-
-      -name: Setup VPN config
-      run: |
-          echo "${{ secrets.CA_CRT }}" > ca.crt
-          echo "${{ secrets.USER_CRT }}" > user.crt
-          echo "${{ secrets.USER_KEY }}" > user.key
-          echo "${{ secrets.SECRET_USERNAME_PASSWORD }}" > secret.txt
-          echo "${{ secrets.TLS_KEY }}" > tls.key          
-
-      -name: Connect VPN
-      run: sudo openvpn --config ".github/vpn/config.ovpn" --log "vpn.log" --daemon
-
-      -name: Wait for a VPN connection
-      timeout-minutes: 1
-      run: until ping -c1 your-server-address; do sleep 2; done
-        # OR
-       run: until dig @your-dns-resolver your-server-address A +time=1; do sleep 2; done
+      - name: Establish VPN connection
+        run: |
+            sudo apt update
+            sudo apt install -y openvpn openvpn-systemd-resolved
+            echo "${{ secrets.VPN_CONFIG }}" > vpn-config.ovpn
+            echo "${{ secrets.VPN_USERNAME }}" > vpn-credentials.txt
+            echo "${{ secrets.VPN_PASSWORD }}" >> vpn-credentials.txt
+            sudo openvpn --config vpn-config.ovpn --auth-user-pass vpn-credentials.txt --daemon
+            sleep 15
       
   cypress-tests:
     runs-on: ubuntu-latest
