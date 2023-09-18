@@ -26,7 +26,7 @@ jobs:
             apt-get install sudo
             sudo apt-get update --allow-releaseinfo-change
             sudo apt update
-            sudo apt-get install openvpn openvpn-systemd-resolve
+            sudo apt install -y openvpn openvpn-systemd-resolved
 
       - run:
           name: Check IP before VPN connection
