@@ -14,8 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Clear Node.js cache
-        run: npm cache clean -f
+    
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -23,7 +22,7 @@ jobs:
           node-version: 14 # You can change the Node.js version as needed
          
       - name: Update npm
-        run: npm install -g npm@latest
+        run: npm install 
 
 
 
