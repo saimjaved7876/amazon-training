@@ -22,7 +22,7 @@ jobs:
           node-version: 16.x # You can change the Node.js version as needed
          
       - name: Update npm
-        run: npm install -g npm@latest
+        run: npm install
 
 
 
