@@ -20,7 +20,7 @@ jobs:
           node-version: 14 # You can change the Node.js version as needed
 
       - name: Update npm
-        run: npm install -g npm@latest
+        run: npm install
 
       - name: Delete package-lock.json
         run: rm -f package-lock.json
