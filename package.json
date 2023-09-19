@@ -17,8 +17,5 @@
     "cypress-image-compare": "^5.5.0",
     "cypress-plugin-xhr-toggle": "^1.0.0",
     "mochawesome": "^7.1.3"
-  },
-  "devDependencies": {
-    "cypress-image-snapshot": "^4.0.1"
   }
 }
