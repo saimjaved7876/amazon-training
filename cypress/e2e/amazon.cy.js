@@ -7,7 +7,7 @@ const amazon_PageActions = new amazonPageActions
 describe('TC_01 Check product can be entered in the cart', () => {
 
   before(()=>{
-    cy.visit("https://www.amazon.com")
+    cy.visit("https://www.amazon.pk")
 
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('of undefined')

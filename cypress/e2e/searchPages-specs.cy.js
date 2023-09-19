@@ -8,7 +8,7 @@ const searchPage_actions = new searchpageActions
 describe("search pages check results", ()=>{
 
     before(()=>{
-     cy.visit("https://www.amazon.com/ref=nav_bb_logo")
+     cy.visit("https://www.amazon.pk")
     })
 
  it("search page type and result check", ()=>{
