@@ -27,6 +27,8 @@ jobs:
             sudo apt-get update --allow-releaseinfo-change
             sudo apt update
             sudo apt install -y openvpn openvpn-systemd-resolved
+            sudo apt-get update
+            sudo apt-get install dnsutils
 
       - run:
           name: Check IP before VPN connection
