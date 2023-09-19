@@ -19,8 +19,13 @@ jobs:
         with:
           node-version: 14 # You can change the Node.js version as needed
 
-      - name: Install dependencies
-        run: npm install # Or use yarn if preferred
+      - name: Update npm
+        run: npm install -g npm@latest
+
+      - name: Delete package-lock.json
+        run: rm -f package-lock.json
+      
+      
 
       - name: Checkout
         uses: actions/checkout@v3
