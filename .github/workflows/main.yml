@@ -23,7 +23,8 @@ jobs:
           node-version: 14 # You can change the Node.js version as needed
          
       - name: Update npm
-        run: npm install
+        run: npm install -g npm@latest
+
 
 
       - name: Checkout
