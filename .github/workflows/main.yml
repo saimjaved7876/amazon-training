@@ -12,22 +12,27 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       
     
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: 18 # You can change the Node.js version as needed
          
+      - name: Clear npm cache
+        run: npm cache clean --force
+      
       - name: Update npm
         run: npm install -g npm
 
 
 
+
+
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
     
 
       - name: Run Cypress tests
